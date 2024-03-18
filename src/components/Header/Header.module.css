@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 5px;
+  position: sticky;
+  top: 5px;
+  right: 0;
+  z-index: 9999;
+}
+
+.header span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #776ade;
+  font-size: 14px;
+  height: 15px;
+  width: 12px;
+  border-radius: 5px;
+  position: absolute;
+  top: 16px;
+  right: 18px;
+}

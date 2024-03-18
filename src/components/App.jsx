@@ -1,12 +1,11 @@
 import { useSelector } from "react-redux";
 import PlaceItem from "./place-item/PlaceItem";
+import Header from "./Header/Header";
 
 function App() {
-  const state = useSelector(state => state);
-  console.log(state);
-
   return (
     <div>
+      <Header />
       <PlaceItem place={{
         id: 1,
         name: 'Moscow'
