@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
 import PlaceItem from "./place-item/PlaceItem";
 
 function App() {
+  const state = useSelector(state => state);
+  console.log(state);
+
   return (
     <div>
       <PlaceItem place={{
