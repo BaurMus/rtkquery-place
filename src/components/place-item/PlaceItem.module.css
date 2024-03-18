@@ -1,0 +1,10 @@
+.place {
+  background-color: #383131;
+  margin: 3px 0;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.place h2 {
+  margin-bottom: 3px;
+}
