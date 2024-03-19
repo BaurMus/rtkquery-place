@@ -1,0 +1,19 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "name": "Taraz",
+      "image": "https://www.gorodtaraz.kz/upload/346/u34657/1/8/4afaca98.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Almaty",
+      "image": "https://www.advantour.com/img/kazakhstan/images/almaty.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Bishkek",
+      "image": "https://www.advantour.com/img/kyrgyzstan/images/bishkek.jpg"
+    }
+  ]
+}

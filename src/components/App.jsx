@@ -3,27 +3,29 @@ import Header from "./Header/Header";
 import User from "./user/User";
 import { useEffect } from "react";
 import { useActions } from "../store/hooks/useActions";
+import { useGetPlacesQuery } from "../store/api/api";
 
 function App() {
   const {getUserById} = useActions();
   useEffect(() => {getUserById()}, []);
 
+  const {isLoading,data} = useGetPlacesQuery();
+
   return (
     <div>
       <Header />
       <User />
-      <PlaceItem place={{
-        id: 1,
-        name: 'Moscow'
-      }}/>
-      <PlaceItem place={{
-        id: 2,
-        name: 'Almaty'
-      }}/>
-      <PlaceItem place={{
-        id: 3,
-        name: 'Astana'
-      }}/>
+      {isLoading
+        ? <div>Loading...</div>
+        : data && data.length !== 0
+          ? data.map(place => 
+            <PlaceItem 
+              key={place.id}
+              place={place}
+            />)
+          : <h3>Places not found</h3>
+      }
+      
     </div>
   );
 }

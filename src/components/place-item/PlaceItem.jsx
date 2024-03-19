@@ -9,6 +9,7 @@ export default function PlaceItem({place}) {
 
   return (
     <div className={styles.place}>
+      <img src={place.image} alt={place.name} width={100}/>
       <h2>{place.name}</h2>
       <button onClick={() => toggleFavorites(place)}>
         {isExists ? 'Remove from' : 'Add to'} favorites
