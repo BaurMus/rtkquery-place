@@ -4,7 +4,7 @@ import { actions } from '../../store/favorites/favorites.slices';
 
 export default function PlaceItem({place}) {
   const dispatch = useDispatch();
-  const favorites = useSelector(state => state);
+  const favorites = useSelector(state => state.favorites);
   const isExists = favorites.some(p => p.id === place.id)
 
   return (

@@ -3,7 +3,7 @@ import styles from './Header.module.css';
 import { useSelector } from "react-redux";
 
 export default function Header() {
-  const favorites = useSelector(state => state);
+  const favorites = useSelector(state => state.favorites);
 
   return (
     <div className={styles.header}>
