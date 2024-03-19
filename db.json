@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Bishkek",
       "image": "https://www.advantour.com/img/kyrgyzstan/images/bishkek.jpg"
+    },
+    {
+      "name": "Semey",
+      "image": "https://kaztag.kz/upload/resize_cache/iblock/656/881_500_2/Snimok-ekrana-2022_06_25-v-18.55.06.png?1675194534955757",
+      "id": 4
     }
   ]
 }

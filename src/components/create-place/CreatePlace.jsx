@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useCreatePlaceMutation } from "../../store/api/createPlaceApi";
 
 const initialState = {
   name: '',
@@ -7,11 +8,11 @@ const initialState = {
 
 export default function CreatePlace() {
   const [placeForm, setPlaceForm] = useState(initialState);
+  const [mutate] = useCreatePlaceMutation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(placeForm);
-    setPlaceForm(initialState);
+    mutate(placeForm).then(() => setPlaceForm(initialState));
   }
   return (
     <div>
