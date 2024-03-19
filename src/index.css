@@ -27,3 +27,20 @@ button {
 button:hover {
   background-color: #954d8f;
 }
+
+input {
+  display: block;
+  padding: 3px;
+  margin-bottom: 3px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #222;
+  outline: none;
+  transition: border-color .4s ease-in-out;
+}
+
+input:focus {
+  border-color: #954d8f;
+  background-color: #e6dede;
+}

@@ -4,17 +4,23 @@ import User from "./user/User";
 import { useEffect } from "react";
 import { useActions } from "../store/hooks/useActions";
 import { useGetPlacesQuery } from "../store/api/api";
+import CreatePlace from "./create-place/CreatePlace";
+
+const userId = 1;
 
 function App() {
   const {getUserById} = useActions();
   useEffect(() => {getUserById()}, []);
 
-  const {isLoading,data} = useGetPlacesQuery();
+  const {isLoading,data} = useGetPlacesQuery(undefined, {
+    skip: !userId
+  });
 
   return (
     <div>
       <Header />
       <User />
+      <CreatePlace />
       {isLoading
         ? <div>Loading...</div>
         : data && data.length !== 0
