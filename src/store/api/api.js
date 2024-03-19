@@ -10,7 +10,7 @@ export const api = createApi({
   }),
   endpoints: builder => ({
     getPlaces: builder.query({
-      query: () => ''
+      query: () => '?_sort=id&_order=desc'
     })
   })
 })
