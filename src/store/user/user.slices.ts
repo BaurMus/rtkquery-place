@@ -1,10 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { getUserById } from "./user.actions";
+import { IUser, IUserInitial } from "../../types/user/user.type";
 
-const initialState = {
+const initialState: IUserInitial = {
   isLoading: false,
   error: null,
-  user: {}
+  user: {} as IUser
 };
 
 export const userSlices = createSlice({
@@ -16,14 +17,14 @@ export const userSlices = createSlice({
       .addCase(getUserById.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getUserById.fulfilled, (state, action) => {
+      .addCase(getUserById.fulfilled, (state, action: PayloadAction<IUser>) => {
         state.isLoading = false;
         state.user = action.payload;
       })
-      .addCase(getUserById.rejected, (state, action) => {
+      .addCase(getUserById.rejected, (state, action: any) => {
         state.isLoading = false;
         state.error = action.payload.error;
-        state.user = {};
+        state.user = {} as IUser;
       })
   }
 })

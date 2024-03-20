@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react"
 import { useCreatePlaceMutation } from "../../store/api/createPlaceApi";
-import { IPlaceData } from "../../types/places.type";
+import { IPlaceData } from "../../types/places/places.type";
 
 const initialState: IPlaceData = {
   name: '',

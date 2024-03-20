@@ -1,7 +1,7 @@
 import styles from './PlaceItem.module.css';
 import { useActions } from '../../store/hooks/useActions';
 import { useFavorites } from '../../store/hooks/useFavorites';
-import { IPlace } from '../../types/places.type';
+import { IPlace } from '../../types/places/places.type';
 
 interface IPlaceItem {
   place: IPlace
