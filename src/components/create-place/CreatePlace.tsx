@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { FormEvent, useState } from "react"
 import { useCreatePlaceMutation } from "../../store/api/createPlaceApi";
+import { IPlaceData } from "../../types/places.type";
 
-const initialState = {
+const initialState: IPlaceData = {
   name: '',
   image: ''
 };
@@ -10,7 +11,7 @@ export default function CreatePlace() {
   const [placeForm, setPlaceForm] = useState(initialState);
   const [mutate] = useCreatePlaceMutation();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     mutate(placeForm).then(() => setPlaceForm(initialState));
   }

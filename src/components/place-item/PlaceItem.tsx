@@ -1,8 +1,13 @@
 import styles from './PlaceItem.module.css';
 import { useActions } from '../../store/hooks/useActions';
 import { useFavorites } from '../../store/hooks/useFavorites';
+import { IPlace } from '../../types/places.type';
 
-export default function PlaceItem({place}) {
+interface IPlaceItem {
+  place: IPlace
+}
+
+export default function PlaceItem({place}: IPlaceItem) {
   const {toggleFavorites} = useActions();
   const favorites = useFavorites();
   const isExists = favorites.some(p => p.id === place.id)
