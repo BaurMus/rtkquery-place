@@ -9,8 +9,7 @@ interface IPlaceItem {
 
 export default function PlaceItem({place}: IPlaceItem) {
   const {toggleFavorites} = useActions();
-  const favorites = useFavorites();
-  const isExists = favorites.some(p => p.id === place.id)
+  const {isExists} = useFavorites(place.id);
 
   return (
     <div className={styles.place}>

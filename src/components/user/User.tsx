@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux"
 import { useActions } from "../../store/hooks/useActions";
 import { useTypedSelector } from "../../store/hooks/useTypedSelector";
 

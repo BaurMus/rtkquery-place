@@ -3,7 +3,7 @@ import styles from './Header.module.css';
 import { useFavorites } from "../../store/hooks/useFavorites";
 
 export default function Header() {
-  const favorites = useFavorites();
+  const {favorites} = useFavorites();
 
   return (
     <div className={styles.header}>
