@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { IPlace } from "../../types/places/places.type";
 
-const initialState = [];
+const initialState: IPlace[] = [];
 
 export const favoritesSlice = createSlice({
   name: 'favorites',

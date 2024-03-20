@@ -12,7 +12,7 @@ function App() {
   const {getUserById} = useActions();
   useEffect(() => {getUserById()}, []);
 
-  const {isLoading,data} = useGetPlacesQuery(undefined, {
+  const {isLoading,data} = useGetPlacesQuery(null, {
     skip: !userId
   });
 

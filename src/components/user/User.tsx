@@ -12,7 +12,7 @@ export default function User() {
         ? <div>Loading...</div>
         : error
           ? <div>{error}</div>
-          : user?.name
+          : user.name
             ? <h3>User: {user.name}</h3>
             : <h3>USER NOT FOUND</h3>
       }
