@@ -8,7 +8,10 @@ export const createPlaceApi = api.injectEndpoints({
         url: '',
         body: place,
         method: 'POST'
-      })
+      }),
+      invalidatesTags: [{
+        type: 'Places'
+      }]
     })
   })
 })

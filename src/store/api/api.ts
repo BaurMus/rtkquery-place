@@ -12,7 +12,10 @@ export const api = createApi({
   endpoints: builder => ({
     getPlaces: builder.query<IPlace[], string>({
       query: (searchPlaceQuery) => `?_sort=id&_order=desc&q=${searchPlaceQuery}`,
-    })
+      providesTags: [{
+        type: 'Places'
+      }]
+    }),
   })
 })
 
