@@ -10,8 +10,8 @@ export const api = createApi({
     baseUrl: API_URL
   }),
   endpoints: builder => ({
-    getPlaces: builder.query<IPlace[], null>({
-      query: () => '?_sort=id&_order=desc'
+    getPlaces: builder.query<IPlace[], string>({
+      query: (searchPlaceQuery) => `?_sort=id&_order=desc&q=${searchPlaceQuery}`,
     })
   })
 })
